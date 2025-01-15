@@ -2,7 +2,7 @@
 
 UnityMCP is a powerful Unity Editor plugin that implements the Model Context Protocol (MCP), enabling seamless integration between Unity and AI assistants. It provides real-time editor state monitoring, remote command execution, and comprehensive logging capabilities.
 
-<img src="https://user-images.githubusercontent.com/74038190/212281763-e6ecd7ef-c4aa-45b6-a97c-f33f6bb592bd.gif](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif](https://i.imgur.com/Yy3IzJU.gif" width="100">
+<img src="https://i.imgur.com/Yy3IzJU.gif" width="100">
 
 ## Architecture
 
