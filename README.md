@@ -147,4 +147,4 @@ The system provides comprehensive error handling for:
 
 ## License
 
-This project is private and not licensed for public use.
+This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0).
