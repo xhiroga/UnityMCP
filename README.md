@@ -14,9 +14,6 @@
 <a href="https://github.com/Arodoid/UnityMCP/network/members"><img src="https://img.shields.io/github/forks/Arodoid/UnityMCP" alt="Forks Badge"/></a>
 
 
-
-[![smithery badge](https://smithery.ai/badge/@Arodoid/unitymcp)](https://smithery.ai/server/@Arodoid/unitymcp)
-
 UnityMCP is a powerful Unity Editor plugin that implements the Model Context Protocol (MCP), enabling seamless integration between Unity and AI assistants. It provides real-time editor state monitoring, remote command execution, and comprehensive logging capabilities.
 
 ![UnityMCP](https://github.com/user-attachments/assets/53965337-75b8-4f0e-88d2-b2a4069546f4)
