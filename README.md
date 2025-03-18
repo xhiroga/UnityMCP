@@ -1,4 +1,19 @@
-# UnityMCP
+# UnityMCP [![](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white 'LinkedIn')](https://www.linkedin.com/in/jack-w-richards/)
+
+
+
+[![](https://badge.mcpx.dev?type=server 'MCP Server')](https://modelcontextprotocol.io/introduction)
+[![smithery badge](https://smithery.ai/badge/@Arodoid/unitymcp)](https://smithery.ai/server/@Arodoid/unitymcp)
+
+[![](https://img.shields.io/github/last-commit/Arodoid/UnityMCP 'Last Commit')](https://github.com/CoderGamester/mcp-unity/commits/main)
+<a href="https://github.com/Arodoid/UnityMCP/pulls"><img src="https://img.shields.io/github/issues-pr/Arodoid/UnityMCP" alt="Pull Requests Badge"/></a>
+<a href="https://github.com/Arodoid/UnityMCP/issues"><img src="https://img.shields.io/github/issues/Arodoid/UnityMCP" alt="Issues Badge"/></a>
+[![](https://img.shields.io/badge/License-MIT-red.svg 'MIT License')](https://opensource.org/licenses/MIT)
+
+<a href="https://github.com/Arodoid/UnityMCP/stargazers"><img src="https://img.shields.io/github/stars/Arodoid/UnityMCP" alt="Stars Badge"/></a>
+<a href="https://github.com/Arodoid/UnityMCP/network/members"><img src="https://img.shields.io/github/forks/Arodoid/UnityMCP" alt="Forks Badge"/></a>
+
+
 
 UnityMCP is a powerful Unity Editor plugin that implements the Model Context Protocol (MCP), enabling seamless integration between Unity and AI assistants. It provides real-time editor state monitoring, remote command execution, and comprehensive logging capabilities.
 
