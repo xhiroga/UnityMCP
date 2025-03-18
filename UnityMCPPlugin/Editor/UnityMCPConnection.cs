@@ -652,13 +652,51 @@ try
                     GenerateInMemory = true
                 };
                 
-                // Add necessary references
-                options.ReferencedAssemblies.Add(typeof(UnityEngine.Object).Assembly.Location);
-                options.ReferencedAssemblies.Add(typeof(UnityEditor.Editor).Assembly.Location);
-                options.ReferencedAssemblies.Add(typeof(System.Linq.Enumerable).Assembly.Location); // Add System.Core for LINQ
-                options.ReferencedAssemblies.Add(typeof(object).Assembly.Location); // Add mscorlib
-                options.ReferencedAssemblies.Add(AppDomain.CurrentDomain.GetAssemblies()
-                    .First(a => a.GetName().Name == "netstandard").Location); // Add netstandard
+                // Use a HashSet to track already added assemblies by their full name
+                // This ensures we don't add the same assembly or assemblies with overlapping types multiple times
+                var addedAssemblies = new HashSet<string>();
+                
+                // Helper method to add an assembly and its dependencies if not already added
+                void AddAssemblyWithDependencies(System.Reflection.Assembly assembly)
+                {
+                    if (assembly == null || addedAssemblies.Contains(assembly.FullName))
+                        return;
+                    
+                    // Add the assembly
+                    options.ReferencedAssemblies.Add(assembly.Location);
+                    addedAssemblies.Add(assembly.FullName);
+                    
+                    // Log for debugging
+                    Debug.Log($"[UnityMCP] Added assembly reference: {assembly.GetName().Name}");
+                }
+                
+                try
+                {
+                    // Add core Unity assemblies
+                    AddAssemblyWithDependencies(typeof(UnityEngine.Object).Assembly);
+                    AddAssemblyWithDependencies(typeof(UnityEditor.Editor).Assembly);
+                    
+                    // Add core .NET assemblies - prioritize netstandard over mscorlib to avoid duplicates
+                    var netStandardAssembly = AppDomain.CurrentDomain.GetAssemblies()
+                        .FirstOrDefault(a => a.GetName().Name == "netstandard");
+                    
+                    if (netStandardAssembly != null)
+                    {
+                        AddAssemblyWithDependencies(netStandardAssembly);
+                    }
+                    else
+                    {
+                        // Fallback to mscorlib if netstandard is not available
+                        AddAssemblyWithDependencies(typeof(object).Assembly);
+                    }
+                    
+                    // Add System.Core for LINQ if needed and not already added
+                    AddAssemblyWithDependencies(typeof(System.Linq.Enumerable).Assembly);
+                }
+                catch (Exception e)
+                {
+                    Debug.LogWarning($"[UnityMCP] Error adding assembly references: {e.Message}. Will continue with compilation anyway.");
+                }
                 
                 // Compile and execute
                 using (var provider = new Microsoft.CSharp.CSharpCodeProvider())
