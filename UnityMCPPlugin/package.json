@@ -5,7 +5,7 @@
   "description": "Unity Editor integration with Claude AI via Model Context Protocol",
   "unity": "2020.3",
   "dependencies": {
-    "com.unity.nuget.newtonsoft-json": "3.0.2"
+    "com.unity.nuget.newtonsoft-json": "3.2.1"
   },
   "keywords": [
     "claude",
