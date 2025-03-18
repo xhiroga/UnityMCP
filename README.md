@@ -15,6 +15,8 @@
 
 
 
+[![smithery badge](https://smithery.ai/badge/@Arodoid/unitymcp)](https://smithery.ai/server/@Arodoid/unitymcp)
+
 UnityMCP is a powerful Unity Editor plugin that implements the Model Context Protocol (MCP), enabling seamless integration between Unity and AI assistants. It provides real-time editor state monitoring, remote command execution, and comprehensive logging capabilities.
 
 ![UnityMCP](https://github.com/user-attachments/assets/53965337-75b8-4f0e-88d2-b2a4069546f4)
@@ -57,6 +59,14 @@ A TypeScript-based MCP server that exposes Unity Editor functionality through st
    - Buffer management for optimal performance
 
 ## Installation
+
+### Installing via Smithery
+
+To install UnityMCP for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@Arodoid/unitymcp):
+
+```bash
+npx -y @smithery/cli install @Arodoid/unitymcp --client claude
+```
 
 ### Prerequisites
 - Unity 2022.3 or later
